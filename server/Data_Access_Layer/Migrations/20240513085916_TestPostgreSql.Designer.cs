@@ -339,7 +339,6 @@ namespace Data_Access_Layer.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Avilability")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("CityId")
@@ -352,59 +351,48 @@ namespace Data_Access_Layer.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Department")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("EmployeeId")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
                     b.Property<string>("LinkdInUrl")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Manager")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("MyProfile")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("MySkills")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("Status")
                         .HasColumnType("boolean");
 
                     b.Property<string>("Surname")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("UserId")
                         .HasColumnType("integer");
 
                     b.Property<string>("UserImage")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("WhyIVolunteer")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");

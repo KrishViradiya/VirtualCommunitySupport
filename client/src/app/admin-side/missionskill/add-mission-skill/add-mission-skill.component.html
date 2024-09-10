@@ -12,7 +12,7 @@
                 <div class="row" style="padding: 3px 10px 3px 10px;">
                   <input type="hidden" formControlName="id">
                   <div class="form-group">
-                    <label class="col-form-label">Theme Name</label>
+                    <label class="col-form-label">Skill Name</label>
                     <input type="text" formControlName="themeName" class="form-control" [class.error]="addMissionSkillForm.controls['themeName'].dirty && addMissionSkillForm.hasError('required','themeName')">
                     <span class="text-danger" *ngIf="addMissionSkillForm.controls['themeName'].dirty && addMissionSkillForm.hasError('required','themeName')">
                       ThemeName is required

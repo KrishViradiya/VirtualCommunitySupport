@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <app-navbar></app-navbar>
   <app-searchin-sorting></app-searchin-sorting>
   </div>
@@ -115,6 +115,50 @@
       <div class="modal-footer" style="display: block;">
         <button type="button" class="btnCancel" (click)="closePopup()"><span class="Cancel"> Cancel</span> </button>
         <button type="button" class="btnSave"><span class="Save">Save</span></button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+<!-- HTML for the modal and form -->
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display': displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Add New Mission</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <label class="col-form-label">Country</label>
+            <select class="form-select" [(ngModel)]="selectedCountry" (change)="onCountryChange()">
+              <option value="">Select Country</option>
+              <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+            </select>
+          </div>
+          <div class="col-sm-6">
+            <label class="col-form-label">City</label>
+            <select class="form-select" [(ngModel)]="selectedCity">
+              <option value="">Select City</option>
+              <option *ngFor="let city of cityOptions" [value]="city">{{ city }}</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-form-label">Mission Skills</label>
+          <select class="form-select">
+            <option value="">Select mission skills</option>
+            <option *ngFor="let skill of missionSkills" [value]="skill">{{ skill }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer" style="display: block;">
+        <button type="button" class="btnCancel" (click)="closePopup()">Cancel</button>
+        <button type="button" class="btnSave">Save</button>
       </div>
     </div>
   </div>

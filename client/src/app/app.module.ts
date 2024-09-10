@@ -81,7 +81,9 @@ import { DatePipe } from '@angular/common';
     NgToastModule,
     NgxPaginationModule,
     NgxStarRatingModule,
-    UiSwitchModule
+    UiSwitchModule,
+    // changess  -- ..
+    FormsModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,
